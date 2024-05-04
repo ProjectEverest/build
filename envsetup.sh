@@ -896,13 +896,6 @@ function lunch()
 
     check_product $product
 
-    local prebuilt_kernel=$(get_build_var TARGET_PREBUILT_KERNEL)
-    if [ -z "$prebuilt_kernel" ]; then
-      export INLINE_KERNEL_BUILDING=true
-    else
-      unset INLINE_KERNEL_BUILDING
-    fi
-
     [[ -n "${ANDROID_QUIET_BUILD:-}" ]] || echo
 
     fixup_common_out_dir
