@@ -863,10 +863,6 @@ function lunch()
         cd - > /dev/null
     fi
 
-    # Always pick the latest release
-    release=$(grep "BUILD_ID" build/make/core/build_id.mk | tail -1 | cut -d '=' -f 2 | cut -d '.' -f 1 | tr '[:upper:]' '[:lower:]')
-    export TARGET_RELEASE=$release
-
     TARGET_PRODUCT=$product \
     TARGET_BUILD_VARIANT=$variant \
     TARGET_RELEASE=$release \
@@ -893,8 +889,6 @@ function lunch()
     export TARGET_RELEASE=$release
     # Note this is the string "release", not the value of the variable.
     export TARGET_BUILD_TYPE=release
-
-    check_product $product
 
     [[ -n "${ANDROID_QUIET_BUILD:-}" ]] || echo
 
