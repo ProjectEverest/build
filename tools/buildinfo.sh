@@ -52,6 +52,9 @@ echo "ro.build.product=$TARGET_DEVICE"
 
 echo "# Do not try to parse description or thumbprint"
 echo "ro.build.description?=$PRIVATE_BUILD_DESC"
+echo "# CTS attestion fingerprint description"
+echo "persist.sys.pihooks_mainline_FINGERPRINT=$PIHOOKS_BUILD_FINGERPRINT"
+echo "persist.sys.pihooks_mainline_MODEL=$PIHOOKS_MODEL_SPOOF"
 if [ -n "$BUILD_THUMBPRINT" ] ; then
   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
 fi
