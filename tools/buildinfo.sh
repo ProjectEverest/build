@@ -55,6 +55,11 @@ echo "ro.build.description?=$PRIVATE_BUILD_DESC"
 echo "# CTS attestion fingerprint description"
 echo "persist.sys.pihooks_mainline_FINGERPRINT=$PIHOOKS_BUILD_FINGERPRINT"
 echo "persist.sys.pihooks_mainline_MODEL=$PIHOOKS_MODEL_SPOOF"
+echo "ro.everest.chipset=$EVEREST_CHIPSET"
+echo "ro.everest.storage=$EVEREST_STORAGE"
+echo "ro.everest.ram=$EVEREST_RAM"
+echo "ro.everest.screen_res=$EVEREST_SCREEN_RES"
+echo "ro.everest.battery=$EVEREST_BATTERY"
 if [ -n "$BUILD_THUMBPRINT" ] ; then
   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
 fi
